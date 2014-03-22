@@ -1,23 +1,30 @@
 {
   "name": "omnioculars",
+  "description": "experimental streaming video client",
   "preferGlobal": true,
   "version": "0.0.1",
   "author": "Luca Casartelli <luca@plasticpanda.com>",
   "scripts": {
     "start": "node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lcasartelli/omnioculars.git"
+  },
   "dependencies": {
     "koa": "*",
     "koa-logger": "*",
     "koa-render": "*",
     "koa-route": "*",
-    "sugar": "*",
+    "sugar": "^1.4.1",
     "pure-css-pagination": "*",
     "co-views": "*",
     "co-request": "*",
     "co-body": "*",
     "then-jade": "^1.1.0",
-    "peerflix": "^0.4.0"
+    "peerflix": "^0.4.0",
+    "coolog": "^3.0.0",
+    "koa-static": "^1.4.3"
   },
   "license": "MIT",
   "engines": {

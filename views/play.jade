@@ -1,0 +1,17 @@
+extends layout
+
+block links
+  //link(href='http://vjs.zencdn.net/4.4/video-js.css', rel='stylesheet')
+  link(href='css/video-js.css', rel='stylesheet')
+  style(type="text/css")
+    .vjs-default-skin .vjs-control-bar,
+    .vjs-default-skin .vjs-big-play-button { background: rgba(0,0,0,0.38) }
+    .vjs-default-skin .vjs-slider { background: rgba(0,0,0,0.12666666666666668) }
+
+
+block content
+  video.video-js.vjs-default-skin(id="video", controls="", preload="auto", width="75%", height="500", poster="", data-setup="{}")
+   source(src=videosrc, type='video/mp4')
+
+block scripts
+  script(src='http://vjs.zencdn.net/4.4/video.js')

@@ -1,4 +1,5 @@
-/* jshint node: true, strict: true, white: true, indent: 2 */
+#!/usr/bin/env node
+/*jshint node:true, indent:2, laxcomma:true, eqnull:true, unused:true, undef:true */
 
 module.exports = function () {
   'use strict';
@@ -7,7 +8,7 @@ module.exports = function () {
   var engine;
 
   var start = function (magnet, port) {
-    engine = peerflix(torrent, null);
+    engine = peerflix(magnet, null);
     
     engine.on('hotswap', function () {
       //hotswaps++;

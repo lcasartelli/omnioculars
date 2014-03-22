@@ -1,0 +1,6 @@
+extends layout
+block content
+  .pure-g
+    .pure-u-1-1(style='text-align:center; margin-left: auto; margin-right: auto; margin-top: 30%;')
+      form.pure-form(method='get', action='/play')
+        input.pure-input-1-2(name='torrent', type='text', placeholder='Paste magnet link')
