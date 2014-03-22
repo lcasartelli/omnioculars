@@ -3,3 +3,11 @@
   margin-left: auto;
   margin-top: 80px;
 }
+
+.vjs-default-skin .vjs-control-bar, .vjs-default-skin .vjs-big-play-button { 
+  background: rgba(0,0,0,0.38) 
+}
+
+.vjs-default-skin .vjs-slider { 
+  background: rgba(0,0,0,0.12666666666666668) 
+}

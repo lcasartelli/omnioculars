@@ -12,22 +12,15 @@
     "url": "git@github.com:lcasartelli/omnioculars.git"
   },
   "dependencies": {
-    "koa": "*",
-    "koa-logger": "*",
-    "koa-render": "*",
-    "koa-route": "*",
     "sugar": "^1.4.1",
-    "pure-css-pagination": "*",
-    "co-views": "*",
-    "co-request": "*",
-    "co-body": "*",
-    "then-jade": "^1.1.0",
     "peerflix": "^0.4.0",
     "coolog": "^3.0.0",
-    "koa-static": "^1.4.3"
+    "cipolla": "^0.3.1",
+    "coolog-appender-logentries": "^0.2.0",
+    "httboom": "~1.3.2"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=0.11.9"
+    "node": ">=0.10.22"
   }
 }

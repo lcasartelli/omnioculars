@@ -4,11 +4,14 @@
 module.exports = function () {
   'use strict';
 
-  var peerflix = require('peerflix');
-  var engine;
+  var coolog = require('coolog')
+    , peerflix = require('peerflix');
 
-  var start = function (magnet, port) {
-    engine = peerflix(magnet, null);
+  var engine;
+  var logger = coolog.logger('streamer.js', 'root');
+
+  var start = function (opt) {
+    engine = peerflix(opt.magnet, null);
     
     engine.on('hotswap', function () {
       //hotswaps++;
@@ -23,7 +26,8 @@ module.exports = function () {
     });
 
     engine.server.on('listening', function () {
-      console.log('engine listening');
+      logger.info('engine listening');
+      opt.onready();
     });
 
     engine.server.once('error', function () {
@@ -31,13 +35,15 @@ module.exports = function () {
     });
 
     engine.on('ready', function () {
-      console.log('engine ready');
-      engine.server.listen(port || 8244);
+      var port = opt.port || 8244;
+      engine.server.listen(port);
+      logger.info('Starting peerfix on port ' + port);
+
     });
   };
 
   var stop = function () {
-    console.log('server closed...maybe');
+    logger.info('server closed...maybe');
     engine.server.close();
   };
 
