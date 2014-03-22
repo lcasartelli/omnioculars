@@ -1,0 +1,26 @@
+{
+  "name": "omnioculars",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "author": "Luca Casartelli <luca@plasticpanda.com>",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "koa": "*",
+    "koa-logger": "*",
+    "koa-render": "*",
+    "koa-route": "*",
+    "sugar": "*",
+    "pure-css-pagination": "*",
+    "co-views": "*",
+    "co-request": "*",
+    "co-body": "*",
+    "then-jade": "^1.1.0",
+    "peerflix": "^0.4.0"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.11.9"
+  }
+}
